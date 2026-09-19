@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Chat - StrangerChat</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="video-chat.css">
+</head>
+<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+<body>
+
+    <!-- Top Navigation -->
+    <header>
+        <div class="header-left">
+            <a href="index.html" class="home-link">&larr; Home</a>
+            <h2>Video Chat</h2>
+        </div>
+        <div class="status-box">
+            <span id="video-status">Status: Initializing...</span>
+        </div>
+    </header>
+
+    <!-- Main Video Chat Layout -->
+    <main class="video-container">
+        
+        <!-- Video Displays & Controls Area -->
+        <div class="video-grid">
+            
+            <!-- Stranger's Video Window -->
+            <div class="video-box stranger-box">
+                <video id="remote-video" autoplay playsinline></video>
+                <span class="video-label">Stranger</span>
+            </div>
+
+            <!-- Your Own Video Window -->
+            <div class="video-box my-box">
+                <video id="local-video" autoplay playsinline muted></video>
+                <span class="video-label">You</span>
+            </div>
+
+            <!-- Mic & Camera Control Bar -->
+            <div class="media-controls">
+                <button id="toggle-mic-btn" class="control-btn">🎤 Mic On</button>
+                <button id="toggle-cam-btn" class="control-btn">📹 Cam On</button>
+            </div>
+
+        </div>
+
+        <!-- Side Text Chat Window -->
+        <div class="side-chat">
+            <div id="video-chat-messages" class="messages-area">
+                <div class="system-message">Welcome to Video Chat! Click Next to find a stranger.</div>
+            </div>
+
+            <div class="chat-controls">
+                <button id="video-next-btn" class="btn-next">Next</button>
+                <input type="text" id="video-message-input" placeholder="Type a message..." disabled />
+                <button id="video-send-btn" class="btn-send" disabled>Send</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- External Libraries & JavaScript -->
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+    <script src="video-chat.js"></script>
+</body>
+</html>

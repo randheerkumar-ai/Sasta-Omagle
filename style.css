@@ -1,0 +1,153 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+.logo-container h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo-container h1 span {
+    color: #38bdf8;
+}
+
+.logo-container p {
+    color: #94a3b8;
+    margin-top: 8px;
+    font-size: 1.1rem;
+}
+
+/* Main Content Section */
+main {
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.welcome-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.welcome-box p {
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+/* Option Cards (Buttons Container) */
+.chat-options {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.option-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 30px 20px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.option-card h3 {
+    font-size: 1.5rem;
+}
+
+.option-card p {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    margin-bottom: 10px;
+}
+
+/* Action Buttons */
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn-text {
+    background-color: #38bdf8;
+    color: #0f172a;
+}
+
+.btn-text:hover {
+    background-color: #0284c7;
+    color: #ffffff;
+}
+
+.btn-video {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+
+.btn-video:hover {
+    background-color: #dc2626;
+}
+
+/* Rules Section */
+.rules-section {
+    background-color: #1e293b;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.rules-section h3 {
+    margin-bottom: 12px;
+    color: #f1f5f9;
+}
+
+.rules-section ul {
+    list-style-position: inside;
+    color: #94a3b8;
+    line-height: 1.8;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #64748b;
+    font-size: 0.9rem;
+}

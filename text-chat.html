@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Chat - StrangerChat</title>
+    <link rel="stylesheet" href="text-chat.css">
+    <link rel="shortcut icon" href="#">
+</head>
+<!-- MQTT.js CDN -->
+<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+
+<!-- PeerJS Library CDN -->
+<script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+<script src="text-chat.js"></script>
+<body>
+
+    <!-- Top Navigation -->
+    <header>
+        <div class="header-left">
+            <a href="index.html" class="home-link">&larr; Home</a>
+            <h2>Text Chat</h2>
+        </div>
+        <div class="status-box">
+            <span id="chat-status">Status: Click "Start" to find a stranger</span>
+            
+        </div>
+        <link rel="stylesheet" href="text-chat.css">
+    </header>
+
+    <!-- Main Chat Window Area -->
+    <main class="chat-container">
+        
+        <!-- Messages Display Area -->
+        <div id="messages-box" class="messages-area">
+            <div class="system-message">
+                Welcome to Text Chat! Click "New Chat" to start talking with a stranger.
+            </div>
+        </div>
+
+        <!-- Chat Controls & Input Section -->
+        <div class="chat-controls">
+            <button id="next-btn" class="btn-next">New Chat</button>
+            <input type="text" id="message-input" placeholder="Type a message here..." disabled />
+            <button id="send-btn" class="btn-send" disabled>Send</button>
+        </div>
+
+    </main>
+
+</body>
+</html>
